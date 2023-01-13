@@ -25,7 +25,7 @@
 }
 
 :root {
- --purple: #5722CD;
+    --purple: #5722CD;
     --blue: #4845E4;
     --pink: #ED4385;
     --black: #0C0C0C;
@@ -44,56 +44,207 @@
 
 
 /* ------------------------------- 2. Typography ----------------------------------- */
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, .main-content__text1 {
     font-family: 'Merriweather', serif;
 }
 
+.header-content__cta-items {
+    color: white;
+}
+
+button {
+    text-transform: uppercase;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.main-content__text1 {
+    color: var(--purple);
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.main-content__text2 {
+    color: black;
+    text-align: center;
+}
+.main-content__text2 a {
+    color: var(--purple);
+}
+.main-content__text2 a:hover {
+    text-decoration: underline;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
-header{
-    display: flex;
-    flex-direction: column;
-}
-.menu {
-    border: 2px dashed #0C0C0C;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-a {
-    display: flex;
-    border: 2px dashed orange;
-    flex-basis: 130px;
-    flex-shrink: 0;
-}
-
-.header-body {
-    display: flex;
-    flex-direction: column;
-    border: 2px dashed pink;
-    padding: 200px;
-    justify-content: center;
-
-}
-
-.header-body-items {
-    border: 2px dashed purple;
-
-}
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+.outer-content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--lightGrey);
+}
+
+.inner-content-container {
+    display: flex;
+    flex-basis: 1400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-direction: column;
+    margin: 0 50px;
+    align-items: center;
+    border: 2px dotted red;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+#header {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    position: relative;
+}
 
-/* --------------- 4.2 Introduction ------------------- */
+.header-content__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.header-content__navigation ul {
+    display: flex;
+    flex-basis: 400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.header-content__cta {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 400px;
+    margin: 50px 0 0 0;
+    align-items: center;
+}
+
+.header-content__cta-items {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    background-color: var(--pink);
+    border-radius: 40px;
+    border: transparent;
+    width: 200px;
+    flex-basis: 50px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.15);
+
+}
+
+.header__squiggle {
+    background-image: url("/assets/squiggle_line_stripe.svg");
+    position: absolute;
+    width: 78px;
+    height: 86px;
+    bottom: 0;
+}
+
+li {
+    text-align: end;
+}
+
+
+/* --------------- 4.2 First section: company description ------------------- */
+
+.main-content__section {
+    display: flex;
+    border: 2px dashed green;
+    padding: 30px 0;
+    justify-content: center;
+}
+
+.main-content-section1__article {
+    display: flex;
+    flex-basis: 800px;
+    flex-direction: column;
+    gap: 50px;
+    border: 2px dashed orange;
+    flex-grow: 0;
+}
+
+.main-content__text2 {
+    border: 2px dashed blue;
+}
+
+
+/* --------------- 4.3 second section: Client examples ------------------- */
+
+
+.main-section2__container {
+    border: 2px dashed purple;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section2__article_project {
+    border: 2px solid darkblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-section2__project_textbox {
+    border: 2px solid deeppink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 430px;
+    height: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 50px;
+}
+
+.project_squiggle {
+    background-image: url("/assets/squiggle_line.svg");
+    background-repeat: no-repeat;
+    width: 56px;
+    height:6px;
+}
+
+img{
+    width: 100%;
+}
+.main-section2__project_image {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+#rolling-stone-image {
+    border: 2px dashed yellow;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
