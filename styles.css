@@ -52,6 +52,10 @@ h1, h2, h3, h4, h5, h6, .main-content__text1 {
     font-family: 'Merriweather', serif;
 }
 
+h3 {
+    color: var(--purple);
+}
+
 .header-content__cta-items {
     color: white;
 }
@@ -81,11 +85,17 @@ a:hover {
     color: black;
     text-align: center;
 }
+
 .main-content__text2 a {
     color: var(--purple);
 }
+
 .main-content__text2 a:hover {
     text-decoration: underline;
+}
+
+.main-section3-div__article {
+    color: var(--grey);
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
@@ -97,7 +107,6 @@ a:hover {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: var(--lightGrey);
 }
 
 .inner-content-container {
@@ -109,6 +118,7 @@ a:hover {
     margin: 0 50px;
     align-items: center;
     border: 2px dotted red;
+    gap: 30px;
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -180,7 +190,7 @@ li {
 .main-content__section {
     display: flex;
     border: 2px dashed green;
-    padding: 30px 0;
+    /*padding: 30px 0;*/
     justify-content: center;
 }
 
@@ -205,12 +215,18 @@ li {
     border: 2px dashed purple;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .main-section2__article_project {
     border: 2px solid darkblue;
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+#variety {
+    flex-direction: row-reverse;
 }
 
 .main-section2__project_textbox {
@@ -229,22 +245,54 @@ li {
     background-image: url("/assets/squiggle_line.svg");
     background-repeat: no-repeat;
     width: 56px;
-    height:6px;
+    height: 6px;
 }
 
-img{
+img {
     width: 100%;
 }
+
 .main-section2__project_image {
+    display: flex;
     flex-basis: 800px;
     flex-grow: 0;
     flex-shrink: 1;
-}
-
-
-#rolling-stone-image {
     border: 2px dashed yellow;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.15);
 }
 
+
+#project-work-image {
+
+}
+
+/* --------------- 4.4. third section: Services ------------------- */
+
+.main-section3__div {
+    display: flex;
+    border: 2px dashed black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1em 1em;
+}
+
+.main-section3-div__article {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid purple;
+    flex-basis: 300px;
+    height: 300px;
+    gap: 1em;
+    padding: 0 1em 0 1em;
+}
+
+.main-section3__icons {
+    display: flex;
+    width: 3em;
+    border: 2px solid orange;
+    flex-grow: 0;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
