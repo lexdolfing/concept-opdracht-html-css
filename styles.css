@@ -223,6 +223,7 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #variety {
@@ -254,9 +255,9 @@ img {
 
 .main-section2__project_image {
     display: flex;
-    flex-basis: 800px;
-    flex-grow: 0;
-    flex-shrink: 1;
+    flex-basis: 430px;
+    flex-grow: 1;
+    flex-shrink: 0;
     border: 2px dashed yellow;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.15);
 }
@@ -285,7 +286,7 @@ img {
     flex-basis: 300px;
     height: 300px;
     gap: 1em;
-    padding: 0 1em 0 1em;
+    padding: 1em;
 }
 
 .main-section3__icons {
@@ -293,6 +294,58 @@ img {
     width: 3em;
     border: 2px solid orange;
     flex-grow: 0;
+}
+
+/* --------------- 4.4. third section: Services ------------------- */
+
+#section4_workTogether {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+}
+
+.main-section4__container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50em;
+    gap: 2em;
+    border: 2px solid orange;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+}
+
+#fullname {
+    height: 3em;
+}
+
+#emailadress {
+    height: 3em;
+}
+
+#messagefield {
+    height: 12em;
+}
+
+/* ------------ footer --------------------*/
+footer {
+    background-color: black;
+    color: white;
+    height: 3em;
+}
+
+.footer-inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+}
+
+.footer-inner-container p {
+    display: flex;
+    flex-basis: auto;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
