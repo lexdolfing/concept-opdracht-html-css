@@ -115,10 +115,13 @@ a:hover {
     flex-shrink: 1;
     flex-grow: 0;
     flex-direction: column;
-    margin: 0 50px;
+    margin: 20px 50px;
     align-items: center;
-    border: 2px dotted red;
     gap: 30px;
+}
+
+.outer-content-container__grey-background{
+    background-color: var(--lightGrey);
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -130,6 +133,7 @@ a:hover {
     background: rgb(72, 69, 228);
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
     position: relative;
+    padding: 0 0 40px 0;
 }
 
 .header-content__navigation {
@@ -184,42 +188,35 @@ li {
     text-align: end;
 }
 
-
 /* --------------- 4.2 First section: company description ------------------- */
 
 .main-content__section {
     display: flex;
-    border: 2px dashed green;
-    /*padding: 30px 0;*/
     justify-content: center;
+    padding: 0 50px;
 }
 
 .main-content-section1__article {
     display: flex;
-    flex-basis: 800px;
+    flex-basis: auto;
     flex-direction: column;
     gap: 50px;
-    border: 2px dashed orange;
     flex-grow: 0;
 }
 
-.main-content__text2 {
-    border: 2px dashed blue;
-}
-
-
 /* --------------- 4.3 second section: Client examples ------------------- */
 
+.main-content__section:has(.main-section2__container){
+    background-color: var(--lightGrey);
+}
 
 .main-section2__container {
-    border: 2px dashed purple;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 .main-section2__article_project {
-    border: 2px solid darkblue;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -231,15 +228,21 @@ li {
 }
 
 .main-section2__project_textbox {
-    border: 2px solid deeppink;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     flex-basis: 430px;
     height: 300px;
-    flex-shrink: 0;
+    flex-shrink: 1;
     flex-grow: 0;
     margin: 50px;
+}
+
+.main-section2__project_link {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--purple);
 }
 
 .project_squiggle {
@@ -257,42 +260,38 @@ img {
     display: flex;
     flex-basis: 430px;
     flex-grow: 1;
-    flex-shrink: 0;
-    border: 2px dashed yellow;
+    flex-shrink: 1;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.15);
 }
 
-
-#project-work-image {
-
-}
 
 /* --------------- 4.4. third section: Services ------------------- */
 
 .main-section3__div {
     display: flex;
-    border: 2px dashed black;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 1em 1em;
+    flex-basis: auto;
+    flex-grow: 0;
+    gap: 2em 2em;
 }
 
 .main-section3-div__article {
     display: flex;
     flex-direction: column;
-    border: 2px solid purple;
-    flex-basis: 300px;
-    height: 300px;
+    flex-basis: 320px;
+    height: 320px;
     gap: 1em;
     padding: 1em;
+    border: 1px solid var(--purple);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+
 }
 
 .main-section3__icons {
     display: flex;
     width: 3em;
-    border: 2px solid orange;
     flex-grow: 0;
 }
 
@@ -307,21 +306,21 @@ img {
     color: white;
     display: flex;
     flex-direction: column;
-    flex-basis: 50em;
+    align-items: center;
+    flex-basis: auto;
     gap: 2em;
-    border: 2px solid orange;
 }
 
+.main-section4__container h1, .main-section4__container p {
+    width: auto;
+}
 form{
     display:flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#fullname {
-    height: 3em;
-}
-
-#emailadress {
+#fullname, #emailadress {
     height: 3em;
 }
 
@@ -329,6 +328,13 @@ form{
     height: 12em;
 }
 
+.main-section4__form ::placeholder {
+    padding: 0 0 0 1em;
+}
+
+form button {
+color: white;
+}
 /* ------------ footer --------------------*/
 footer {
     background-color: black;
@@ -340,12 +346,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid yellow;
 }
 
 .footer-inner-container p {
     display: flex;
-    flex-basis: auto;
+    width: auto;
 }
-
 /* ------------------------------- 5. Media Queries -------------------------------- */

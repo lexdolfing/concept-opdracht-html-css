@@ -10,9 +10,9 @@
     <div class="inner-content-container">
         <nav class="header-content__navigation">
             <ul>
-                <li><a href="#header">Case Studies </a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="contact_us">Contact Us</a></li>
+                <li><a href="#case-studies">Case Studies </a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact_us">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -26,9 +26,9 @@
     <div class="header__squiggle"></div>
 </header>
 
-<main class="outer-content-container">
-    <div class="inner-content-container">
-        <section class="main-content__section">
+<main >
+    <div class="outer-content-container">
+        <section class="main-content__section inner-content-container">
             <article class="main-content-section1__article">
                 <p class="main-content__text1">Rekupe is a digital agency in Los Angeles.</p>
                 <p class="main-content__text1">We use strategic UX, SEO optimization and beautiful visual designs to
@@ -42,8 +42,10 @@
                 </p>
             </article>
         </section>
-        <section class="main-content__section">
-            <div class="main-section2__container">
+    </div>
+    <div class="outer-content-container outer-content-container__grey-background">
+        <section class="main-content__section inner-content-container">
+            <div class="main-section2__container" id="case-studies">
                 <article class="main-section2__article_project">
                     <div class="main-section2__project_textbox">
                         <h2>Rolling Stone</h2>
@@ -60,7 +62,7 @@
                     <div class="main-section2__project_textbox">
                         <h2>Variety</h2>
                         <div class="project_squiggle"></div>
-                        <p class="main-section2__project_description">YVariety is an industry leader for breaking
+                        <p class="main-section2__project_description">Variety is an industry leader for breaking
                             entertainment news, reviews and box office results with archive of content dating back to
                             1905.</p>
                         <p class="main-section2__project_link">View project</p>
@@ -81,7 +83,9 @@
                 </article>
             </div>
         </section>
-        <section class="main-content__section">
+        </div>
+    <div class="outer-content-container">
+        <section class="main-content__section inner-content-container" id="services">
             <div class="main-section3__div">
                 <article class="main-section3-div__article">
                     <div class="main-section3__icons"><img src="/assets/icon_web-design.svg"
@@ -130,22 +134,25 @@
             </div>
 
         </section>
+        </div>
+    <div class="outer-content-container" id="section4_workTogether">
 
-        <section class="main-content__section" id="section4_workTogether">
-            <div class="main-section4__container">
+        <section class="main-content__section inner-content-container" >
+            <div class="main-section4__container" id="contact_us">
             <h1>Let's work together</h1>
                 <p>Have a question? Need a quote? Let us know!</p>
-                <form action="">
+                <form action="" class="main-section4__form">
                     <label for="fullname">Name</label><br>
-                    <input type="text" id="fullname" name="fullname"><br>
-                    <label for="emailadress">Email</label><br>
-                    <input type="email" id="emailadress" name="emailadress"><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Name"><br>
+                    <label for="emailadress" >Email</label><br>
+                    <input type="email" id="emailadress" name="emailadress" placeholder="Email"><br>
                     <label for="messagefield">Message</label><br>
-                    <input type="text" id="messagefield" name="messagefield"><br>
-
+                    <input type="text" id="messagefield" name="messagefield" placeholder="Message"><br>
+                    <button type="button">Send</button>
                 </form>
             </div>
         </section>
+        </div>
 
     </div>
 </main>
