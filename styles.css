@@ -342,6 +342,7 @@ li {
     position: absolute;
     left: 100px;
     top: 0.5em;
+    transition: width 0.35s ease-in-out;
 }
 
 .main-section2__project_link:hover::after {
@@ -353,8 +354,6 @@ li {
     position: absolute;
     left: 100px;
     top: 0.5em;
-    transition: width 0.35s ease-in-out;
-
 }
 
 .project_squiggle {
